@@ -1,6 +1,6 @@
 # Calculator
 ## Demo: 
-[Hosted on Netlify - Click here to open](https://main--lustrous-sopapillas-558947.netlify.app/)
+[Hosted on Netlify - Click here to open](https://vial-calculator.netlify.app/)
 ## How to run:
 **NOTE: Clone the repository: `git clone https://github.com/raoashish10/vial-calculator.git`**<br>
 There are 2 ways to run the project:<br>
