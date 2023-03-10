@@ -19,7 +19,7 @@ root.render(
       wrapper="div"
       cursor={true}
       repeat={Infinity}
-      style={{alignItems: "center",justifyContent:"center", fontSize: '50px', fontFamily: "monospace"}}
+      style={{alignItems: "center",justifyContent:"center", fontSize: '50px', fontFamily: "Helvetica"}}
     />
     </center>
     <App />
