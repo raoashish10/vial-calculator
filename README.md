@@ -15,9 +15,10 @@ There are 2 ways to run the project:<br>
 
 2. Using Docker
 <br>Steps:
-    1. In the root directory, run the command: `docker build . -t vial-calculator`
-    2. To run the application: `docker run -p 3000:3000 -d vial-calculator`
-    3. The app will be hosted on [http://localhost:3000/](http://localhost:3000/)
+    1.  Change working directory: `cd vial-calculator`
+    2. In the root directory, run the command: `docker build . -t vial-calculator`
+    3. To run the application: `docker run -p 3000:3000 -d vial-calculator`
+    4. The app will be hosted on [http://localhost:3000/](http://localhost:3000/)
 ## Features
 - Browser-based user interface
 - Number pad with digits 0-9 and decimal point linked with the keyboard (ENTER key or RETURN has not been linked due to certain bugs)
