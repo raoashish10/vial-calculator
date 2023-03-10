@@ -2,16 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { TypeAnimation } from 'react-type-animation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <div className='main-page'>
   <React.StrictMode>
+    <center>
+ <TypeAnimation
+      sequence={[
+
+        'Calculator', 
+        2000, // Waits 2s
+        () => {
+          
+        }
+      ]}
+      wrapper="div"
+      cursor={true}
+      repeat={Infinity}
+      style={{alignItems: "center",justifyContent:"center", fontSize: '50px', fontFamily: "Helvetica"}}
+    />
+    </center>
     <App />
   </React.StrictMode>
+  </div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
