@@ -180,7 +180,6 @@ function App() {
 				<button onClick={memorySub}>M-</button>
 				<button onClick={memoryRecall}>MR</button>
 				<button onClick={memoryClear}>MC</button>
-
 				<button onClick={calculateRoot}>√</button>
 			</div>
 			</div>:<button className='arrow' onClick={handleArrowClick}> <ArrowBackIosNewIcon/></button>

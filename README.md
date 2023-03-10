@@ -6,10 +6,12 @@
 There are 2 ways to run the project:<br>
 1. Using npm
 <br>Steps:
-    1. In the root directory, run the command:
+    1. Change working directory: `cd vial-calculator`
+    2. In the root directory, run the command:
     `npm install`
-    2. To build the application: `npm run build`
-    3. The app will be hosted on [http://localhost:3000/](http://localhost:3000/)
+    3. To build the application: `npm run build`
+    4. Serve the build: `serve -s build  `
+    5. The app will be hosted on [http://localhost:3000/](http://localhost:3000/)
 
 2. Using Docker
 <br>Steps:
