@@ -13,15 +13,13 @@ root.render(
       sequence={[
 
         'Calculator', 
-        2000, // Waits 2s
         () => {
-          
         }
       ]}
       wrapper="div"
       cursor={true}
       repeat={Infinity}
-      style={{alignItems: "center",justifyContent:"center", fontSize: '50px', fontFamily: "Helvetica"}}
+      style={{alignItems: "center",justifyContent:"center", fontSize: '50px', fontFamily: "courier"}}
     />
     </center>
     <App />

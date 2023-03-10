@@ -27,6 +27,10 @@ function App() {
 		{
 			deleteValue()
 		}
+		else if(evt.key == "(" || evt.key == ")")
+		{
+			updateCalc(evt.key)
+		}
 	};
 	  
 
