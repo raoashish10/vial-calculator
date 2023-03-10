@@ -10,7 +10,8 @@ function App() {
 	const [showHistory, setShowHistory] = useState(false);
 	const [showAdvanced, setShowAdvanced] = useState(false);
  	const ops = ['/','*','+','-','.','%','^']
-
+	
+	// Handling keydown event
 	 document.onkeydown = function(evt) {
 		const valid = []
 		for(let i = 0; i < 10; i++)
@@ -27,15 +28,10 @@ function App() {
 		{
 			deleteValue()
 		}
-		else if(evt.key == "(" || evt.key == ")")
-		{
-			updateCalc(evt.key)
-		}
 	};
 	  
-
+	// Main Calculator functions
 	const updateCalc = value => {
-		console.log("updateCalc")
 		if(value === '-' && calc==='' || value === '-' && ops.includes(calc.slice(-1)))
 		{
 			//pass
@@ -51,43 +47,8 @@ function App() {
 		else
 			{setCalc(value)}
 	}
-
-	const memoryAdd = () => {
-		console.log("memoryAdd")
-		setMemoryVal(memoryVal + eval(calc))
-	}
-	const memorySub = () => {
-		console.log("memorySub")
-		setMemoryVal(memoryVal - eval(calc))
-	}
-	const memoryClear = () => {
-		console.log("memoryCall")
-		setMemoryVal(0)
-		memoryRecall()
-	}
-	const memoryRecall = () => {
-		console.log("memoryRecall")
-		setCalc(memoryVal.toString())
-	}
-
-	const addHistory = value => {
-		console.log("addHistory")
-		setHistoryList((historyList) => [
-        ...historyList,
-        {
-            value
-        },
-    ]);
-	}
-	const historyRecall = () => {
-		console.log("historyRecall")
-		if(historyList.length===0)
-			return
-		setShowHistory(!showHistory)
-	}
-	
 	const deleteValue = () => {
-		console.log("deleteValue")
+		//("deleteValue")
 		if (calc === '')
 		{
 			return;
@@ -96,16 +57,16 @@ function App() {
 		setCalc(value)
 	}
 	const clearValue = () => {
-		console.log("clearValue")
+		//("clearValue")
 		setCalc("")
 	}
 	const calculateRoot = value => {
-		console.log("calculateRoot")
+		//("calculateRoot")
 		calculate()
 		setCalc(eval(calc**0.5).toString())
 	}	
 	const calculate = () => {
-		console.log("calculate")
+		//("calculate")
 		let temp = calc
 		try {
 			eval(temp)
@@ -123,10 +84,45 @@ function App() {
 			addHistory(calc + " = " + eval(temp).toString())
 		}
 		
-		console.log("before setcalc",temp)
 		setCalc(eval(temp).toString());	
 	}
 
+	// Memory functions
+	const memoryAdd = () => {
+		setMemoryVal(memoryVal + eval(calc))
+	}
+	const memorySub = () => {
+		//("memorySub")
+		setMemoryVal(memoryVal - eval(calc))
+	}
+	const memoryClear = () => {
+		//("memoryCall")
+		setMemoryVal(0)
+		memoryRecall()
+	}
+	const memoryRecall = () => {
+		//("memoryRecall")
+		setCalc(memoryVal.toString())
+	}
+
+	// History functions
+	const addHistory = value => {
+		//("addHistory")
+		setHistoryList((historyList) => [
+        ...historyList,
+        {
+            value
+        },
+    ]);
+	}
+	const historyRecall = () => {
+		//("historyRecall")
+		if(historyList.length===0)
+			return
+		setShowHistory(!showHistory)
+	}
+	
+	// For loop for creating number buttons
 	const createNumberButtons = () => {
 		const digits = [];
 		for (let i = 1; i<10;i++)
@@ -136,6 +132,7 @@ function App() {
 		return digits;
 	}
 
+	// Advanced options arrow click handler
 	const handleArrowClick = () => {
 		setShowAdvanced(!showAdvanced)
 	}

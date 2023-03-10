@@ -13,7 +13,7 @@ There are 2 ways to run the project:<br>
 
 2. Using Docker
 <br>Steps:
-    1. In the root directory, run the command:`docker build . -t vial-calculator`
+    1. In the root directory, run the command: `docker build . -t vial-calculator`
     2. To run the application: `docker run -p 3000:3000 -d vial-calculator`
     3. The app will be hosted on [http://localhost:3000/](http://localhost:3000/)
 ## Features
